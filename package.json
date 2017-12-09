@@ -1,0 +1,23 @@
+{
+  "name": "QQ-Music-1.0",
+  "version": "1.0.0",
+  "description": "qq.music",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dd328199005/QQ-Music-1.0.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "chen yaod ",
+    "email": "az331127@163.com"
+  },
+  "license": "MIt",
+  "bugs": {
+    "url": "https://github.com/dd328199005/QQ-Music-1.0/issues"
+  },
+  "homepage": "https://github.com/dd328199005/QQ-Music-1.0#readme"
+}
