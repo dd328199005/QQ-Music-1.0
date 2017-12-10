@@ -4,13 +4,63 @@
 body {
   margin: 0; }
 
-h1 {
-  margin: 0; }
+h1, h2 {
+  margin: 0;
+  font-weight: normal; }
 
 ol, ul {
   padding: 0;
   list-style: none;
   margin: 0; }
+
+.radios, .song {
+  color: #333;
+  margin: 14px 10px 0 10px;
+  display: flow-root; }
+  .radios .tittle, .song .tittle {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px; }
+  .radios .list, .song .list {
+    display: flex;
+    flex-wrap: wrap; }
+    .radios .list .item, .song .list .item {
+      background-color: #ffffff;
+      flex-grow: 1;
+      flex-basis: 40%;
+      margin-bottom: 8px; }
+      .radios .list .item:nth-child(2n-1), .song .list .item:nth-child(2n-1) {
+        margin-right: 8px; }
+      .radios .list .item .item_media, .song .list .item .item_media {
+        position: relative; }
+        .radios .list .item .item_media img, .song .list .item .item_media img {
+          display: block;
+          width: 100%;
+          height: 146px;
+          border: 0.5px solid #e6e6e6; }
+        .radios .list .item .item_media .icon, .song .list .item .item_media .icon {
+          width: 24px;
+          height: 24px;
+          background-image: url("/imgs/icon.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 0 0;
+          position: absolute;
+          bottom: 5px;
+          right: 5px; }
+      .radios .list .item .item_info, .song .list .item .item_info {
+        padding: 4px 7px 12px;
+        background-color: white; }
+        .radios .list .item .item_info h3, .song .list .item .item_info h3 {
+          font-weight: normal;
+          font-size: 14px;
+          margin: 0;
+          padding: 0;
+          word-break: break-all;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden; }
 
 #header {
   background-color: #31c27c;
@@ -62,6 +112,7 @@ ol, ul {
   display: none; }
 
 body {
-  background-color: #f4f4f4; }
+  background-color: #f4f4f4;
+  font-family: poppin, Tahoma, Arial, \5FAE\8F6F\96C5\9ED1, sans-serif; }
 
 /*# sourceMappingURL=app.css.map */

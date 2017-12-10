@@ -17,7 +17,7 @@ class Slider {
                     <img src="${slider.img}" alt="slider">
                     </a>
             </div>
-        `).join('')
+        `).join('')//注意掌握map和foreach的区别
     }
 
     start(){
