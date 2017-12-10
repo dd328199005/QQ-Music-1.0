@@ -1,0 +1,13 @@
+#header {
+    background-color: $header-background;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    h1 {
+      display: none;
+    }
+    #logo {
+        height: $logo-height;
+        margin-left: 10px;  
+    }
+}

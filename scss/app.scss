@@ -1,0 +1,10 @@
+@import "_rec";
+@import "_reset";
+@import "_var";
+@import "_header";
+@import "_slider";
+@import '_navbar';
+@import "_helpers";
+body {
+    background-color: $body-background
+}
