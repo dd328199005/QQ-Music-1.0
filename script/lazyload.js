@@ -33,7 +33,7 @@ function lazyLoad(imgNodes) {
         window.dispatchEvent(new Event('scroll'))
         // underscore.js节流库
 
-        function throttle(fn, wait) {
+        function throttle(fn, wait) {//节流函数
             let prev, timer
             return function func() {
                 let curr = Date.now();

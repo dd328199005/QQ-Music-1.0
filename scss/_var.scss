@@ -19,6 +19,18 @@ $font-color-one: #333;
     right: 5px;
 };
 $font-style: poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+$top-img-size: 100px;
+$p-font-size: 14px;
+$p-line-height: 21px;
+$page-margin: 10px;
 
+@mixin no-wrap {
+    word-break:break-all;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+
+}
 
 

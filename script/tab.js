@@ -16,6 +16,8 @@ class Tabs {
                 content.classList.add('hide')
             })
             document.querySelector(target.dataset.view).classList.remove('hide')
+            // lazyLoad(document.querySelectorAll('.top-list .item-img .lazyLoad'))
+            window.dispatchEvent(new Event('scroll'))
         })
     }
 }

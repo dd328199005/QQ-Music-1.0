@@ -84,32 +84,74 @@ ol, ul {
       display: block;
       width: 100%; }
 
-.navbar .nav-list {
-  display: flex;
-  align-items: center; }
-  .navbar .nav-list .nav-itme {
-    flex-grow: 1;
-    text-align: center;
-    line-height: 40px;
-    color: #999;
-    cursor: pointer; }
-    .navbar .nav-list .nav-itme.active {
-      color: #31c27c;
-      font-weight: bolder;
-      position: relative; }
-      .navbar .nav-list .nav-itme.active:after {
-        content: '';
-        position: absolute;
-        display: block;
-        background-color: #31c27c;
-        height: 2px;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        width: 80px; }
+.navbar {
+  background-color: white; }
+  .navbar .nav-list {
+    display: flex;
+    align-items: center; }
+    .navbar .nav-list .nav-itme {
+      flex-grow: 1;
+      text-align: center;
+      line-height: 40px;
+      color: #999;
+      cursor: pointer; }
+      .navbar .nav-list .nav-itme.active {
+        color: #31c27c;
+        font-weight: bolder;
+        position: relative; }
+        .navbar .nav-list .nav-itme.active:after {
+          content: '';
+          position: absolute;
+          display: block;
+          background-color: #31c27c;
+          height: 2px;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0;
+          width: 80px; }
 
 .hide {
   display: none; }
+
+.top-item {
+  padding-right: 10px;
+  margin: 10px;
+  background-color: white; }
+  .top-item a {
+    text-decoration: none;
+    color: #999;
+    display: flex;
+    align-items: center; }
+    .top-item a .item-img {
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+      background: #999; }
+      .top-item a .item-img img {
+        width: 100%; }
+    .top-item a .top-info {
+      margin-left: 12px; }
+      .top-item a .top-info h2,
+      .top-item a .top-info p {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden; }
+      .top-item a .top-info h2 {
+        line-height: 32px;
+        font-size: 16px;
+        color: #333; }
+      .top-item a .top-info p {
+        line-height: 21px;
+        font-size: 14px;
+        color: #999; }
+        .top-item a .top-info p span {
+          color: #333;
+          margin: 0 8px; }
 
 body {
   background-color: #f4f4f4;
