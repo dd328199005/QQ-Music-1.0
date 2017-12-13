@@ -10,6 +10,7 @@
         <header id="header">
             <h1>qq</h1>
             <img id="logo" src="imgs/logo.png" alt="logo">
+            <button class="down-qq">下载APP</button>
         </header>
         <nav class="navbar">
             <ul class="nav-list">
@@ -19,7 +20,7 @@
             </ul>
         </nav>
      
-        <div class="rec-view tab-content">
+        <div class="rec-view  hide tab-content">
             <div class="qq-slider" id="slider">
                 <div class="qq-slider-wrap">
                 </div>
@@ -71,8 +72,43 @@
                 </div> -->
             </div>
         </div>
-        <div class="search-view hide tab-content">
-            搜索
+        <div class="search-view  tab-content">
+            <div class="search-input">
+                <input type="text" name="search" placeholder="搜索歌曲,歌单,专辑" autocomplete="off">
+                <span class="search-icon"></span>
+            </div>
+            <div class="hot-search hide">
+                <h3>热门搜索</h3>
+                <div class="hot-tags">
+                    <a href="#">梦想歌神第二季</a>
+                    <a href="#">一生所爱</a>
+                    <a href="#">DJ舞曲啦啦啦</a>
+                    <a href="#">陈玉红</a>
+                    <a href="#">我</a>
+                    <a href="#">喊了喜剧人第二季</a>
+                    <a href="#">本山快乐营</a>
+                </div>
+            </div>
+            <div class="search-result">
+                <ul class="search-result-list">
+                    <li class="resuilt-item">
+                        <span class="music-icon"></span>
+                        <h6>一生所爱</h6>
+                        <p>卢冠廷</p>
+                    </li>
+                    <li class="resuilt-item">
+                        <span class="music-icon"></span>
+                        <h6>一生所爱</h6>
+                        <p>卢冠廷</p>
+                    </li>
+                    <li class="resuilt-item">
+                        <span class="music-icon"></span>
+                        <h6>一生所爱</h6>
+                        <p>卢冠廷</p>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
         <script src="script/slider.js"></script>
