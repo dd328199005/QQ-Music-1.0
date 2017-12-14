@@ -8,7 +8,7 @@
         el: document.querySelector('.navbar')
     }) 
     
-
+    let search = new Search(document.querySelector('.search-view'))
         
 
     function render(json){

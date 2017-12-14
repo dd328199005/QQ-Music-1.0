@@ -4,7 +4,6 @@ function lazyLoad(imgNodes) {
     if (!IntersectionObserver){
         // 新API是一个观察器有兼容问题
         let observer = new IntersectionObserver(function (entries) {
-            console.log(1)
             entries.forEach(entry => {
                 if (entry.intersectionRatio > 0) {
                     loadImg(entry.target, () => {
@@ -18,7 +17,6 @@ function lazyLoad(imgNodes) {
 
     }else{
         let onscroll = throttle(function onscroll() {
-            console.log(new Date())
             if (imgs.length === 0)
                 return window.removeEventListener('scroll', onscroll)
             imgs = imgs.filter(img => img.classList.contains('lazyLoad'))
@@ -51,7 +49,6 @@ function lazyLoad(imgNodes) {
         }
 
         function viewPort(img) {
-            console.log(2)
             let viewHeight = document.documentElement.clientHeight;
             let viewWidth = document.documentElement.clientWidth;
             let { left, top, bottom, right } = img.getBoundingClientRect()

@@ -26,3 +26,9 @@
 11. encodeURI 和 decodeURI 函数操作的是完整的 URI；这俩函数假定 URI 中的任何保留字符都有特殊意义，所有不会编码它们。
 
 encodeURIComponent 和 decodeURIComponent 函数操作的是组成 URI 的个别组件；这俩函数假定任何保留字符都代表普通文本，所以必须编码它们，所以它们（保留字符）出现在一个完整 URI 的组件里面时不会被解释成保留字符了。
+
+12. insertAdjacentHTML【新接口认识】
+
+13. keyup 和key的关系   【keyup】
+
+14. innerHTML=用法

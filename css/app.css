@@ -218,6 +218,7 @@ ol, ul {
   background-color: white;
   height: 100vh; }
   .search-view .search-result .search-result-list .resuilt-item {
+    background-color: white;
     padding-left: 60px;
     position: relative;
     height: 55px;
