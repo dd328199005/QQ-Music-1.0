@@ -32,3 +32,10 @@ encodeURIComponent 和 decodeURIComponent 函数操作的是组成 URI 的个别
 13. keyup 和key的关系   【keyup】
 
 14. innerHTML=用法
+
+15. 能够转化为false的表达式
+null；
+NaN；
+0；
+空字符串（""）；
+undefined。

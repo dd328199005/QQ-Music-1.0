@@ -32,7 +32,7 @@
     .hot-search {
         padding: 14px 16px;
         background-color: white;
-        height: 100vh;
+        height: 76vh;
         h3 {
             font-size: 14px;
             color: $font-color-one;
@@ -59,8 +59,15 @@
     }
     .search-result {
         background-color: white;
-        height: 100vh;
+        height: 76vh;
+        display: flow-root;
         .search-result-list {
+            .nomore{
+                color: #999;
+                text-align: center;
+                margin: 20px;
+                font-size: 14px;
+            }
             .resuilt-item {
                 background-color: white;
                 padding-left: 60px;

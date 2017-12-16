@@ -97,8 +97,7 @@ ol, ul {
       width: 100%; }
 
 .navbar {
-  background-color: white;
-  width: 100vw; }
+  background-color: white; }
   .navbar .nav-list {
     display: flex;
     align-items: center; }
@@ -124,12 +123,7 @@ ol, ul {
           width: 80px; }
 
 .hide {
-  display: none !important; }
-
-.fixed {
-  position: fixed;
-  top: 0;
-  z-index: 1; }
+  display: none; }
 
 .top-item {
   padding-right: 10px;
@@ -222,13 +216,7 @@ ol, ul {
     border: 1px solid #fc4524; }
 .search-view .search-result {
   background-color: white;
-  height: 76vh;
-  display: flow-root; }
-  .search-view .search-result .search-result-list .nomore {
-    color: #999;
-    text-align: center;
-    margin: 20px;
-    font-size: 14px; }
+  height: 76vh; }
   .search-view .search-result .search-result-list .resuilt-item {
     background-color: white;
     padding-left: 60px;

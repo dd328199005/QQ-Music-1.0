@@ -2,7 +2,6 @@ class Tabs {
     constructor(e){
         this.target = e.el
         this.init()
-        this.fixed()
     }
     init(){
         this.target.addEventListener('click', function (e) {
@@ -20,14 +19,5 @@ class Tabs {
             // lazyLoad(document.querySelectorAll('.top-list .item-img .lazyLoad'))
             window.dispatchEvent(new Event('scroll'))
         })
-    }
-    fixed(){
-        window.onscroll = function () {
-            if(pageYOffset > 44){
-               this.target.classList.add('fixed')
-            }else if(pageYOffset <= 44){
-               this.target.classList.remove('fixed')
-            }
-        }.bind(this)
     }
 }
