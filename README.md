@@ -39,3 +39,14 @@ NaN；
 0；
 空字符串（""）；
 undefined。
+
+
+16. pageYOffset[滚动高度] 和document.documentElement.scrollTop   以及scrollY【是其别名】 类似
+ + document.documentElement.clientHeight【高度】 > document.body.scrollHeight【元素内容文档高度】
+
+
+ var c = 'dakjdakldachendakjdalkjalyang'
+ c.replace(/(chen)|(yang)/g,$`)
+
+
+ 17. height : calc(100vh - 84px);

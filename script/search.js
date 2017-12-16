@@ -33,12 +33,15 @@ class Search{
         this.$el.querySelector('.search-result-list').innerHTML= ''
         this.$el.querySelector('.hot-search').classList.remove('hide')
         this.$el.querySelector('.search-result').classList.add('hide')
-
+        this.onSearch = false
     }
     search(keyword,page){
         if (this.onSearch) return
         this.onSearch = true
         this.keyword =  keyword;
+        this.$el.querySelector('.search-result-list').insertAdjacentHTML('afterbegin', `<li class="loading">
+                <p>正在加载中</p>
+            </li>`)
         fetch(`http://localhost:4000/search?keyword=${this.keyword}&page=${ page || this.page}`)
         .then(res =>res.json())
         .then(json => {
@@ -53,10 +56,14 @@ class Search{
             })
         .then(songs => this.append(songs))
         .then(() => this.onSearch = false)
+        .then(() => {
+            this.$el.querySelector('.search-result-list').firstChild.classList.add('hide')
+        })
         .catch(() => {
             this.$el.querySelector('.search-result-list').insertAdjacentHTML('beforeend', `<li class="nomore">
                 <p>没有更多了</p>
-            </li>` )
+            </li>` );
+            this.$el.querySelector('.search-result-list').firstChild.classList.add('hide')
         })
     }
     append(songs){

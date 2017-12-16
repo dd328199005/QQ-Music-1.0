@@ -1,5 +1,6 @@
 .search-view {
     .search-input{
+        height: 36px;
         margin:10px 0;
         display: flex;
         position: relative;
@@ -32,7 +33,7 @@
     .hot-search {
         padding: 14px 16px;
         background-color: white;
-        height: 76vh;
+        height: calc(100vh - 140px);
         h3 {
             font-size: 14px;
             color: $font-color-one;
@@ -59,7 +60,7 @@
     }
     .search-result {
         background-color: white;
-        height: 76vh;
+        height: calc(100vh - 140px);
         display: flow-root;
         .search-result-list {
             .nomore{
@@ -67,6 +68,13 @@
                 text-align: center;
                 margin: 20px;
                 font-size: 14px;
+            }
+            .loading{
+                color: #999;
+                text-align: center;
+                padding: 12px;
+                background-color: $body-background;
+                font-size: $p-font-size;
             }
             .resuilt-item {
                 background-color: white;

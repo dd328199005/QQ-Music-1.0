@@ -5,6 +5,7 @@ $body-background :#f4f4f4;
 $tab-height:40px;
 $nav-item-color:#999;
 $tab-width:80px;
+$h1-font-size: 24px;
 $h2-font-size: 16px;
 $font-color-one: #333;
 @mixin icon-play {
@@ -41,8 +42,13 @@ $font-red:#fc4524;
     font-size: 16px;
     font-weight: normal;
     color: #000;
-}
+};
 
+@mixin pos-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+};
 
 
 
