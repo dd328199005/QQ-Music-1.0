@@ -50,3 +50,11 @@ undefined。
 
 
  17. height : calc(100vh - 84px);
+
+ 18. target.matches('.play-icon')
+
+ 19. handleEvent addEventListener
+
+ 20.  new Image();
+
+ 21. pointer-events:none;点击不触发时间【穿透】

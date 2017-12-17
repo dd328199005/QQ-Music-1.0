@@ -9,7 +9,8 @@
     }) 
     
     let search = new Search(document.querySelector('.search-view'))
-        
+    
+    let musicPlayer= new MusicPLayer(document.querySelector('.music-player'))
 
     function render(json){
         renderSliders(json.data.slider)

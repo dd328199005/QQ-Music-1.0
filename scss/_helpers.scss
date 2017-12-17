@@ -6,3 +6,11 @@
     top: 0;
     z-index: 1;
 }
+.onactive {
+    color: $header-background;
+}
+.onshow {
+    top: 0 !important;
+    opacity: 1 !important;
+    pointer-events:auto !important;
+}

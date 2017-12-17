@@ -21,6 +21,7 @@ class Search{
         this.arrive = true;
         let keyword = event.currentTarget.value;
         if(!keyword) return this.reset()
+        this.reset()
         this.$el.querySelector('.hot-search').classList.add('hide')
         this.$el.querySelector('.search-result').classList.remove('hide')
         if(event.key!== 'Enter') return;

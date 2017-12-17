@@ -1,9 +1,14 @@
 .music-player {
+    transition: all .2s;
     @include pos-absolute;
+    top:-100vh;
+    opacity: 0;
+    pointer-events:none;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(51, 51, 51, 0.8);
     z-index: 1;
+    overflow: hidden;
     .player-wrap {
         width: 100%;
         @include pos-absolute;
@@ -59,20 +64,37 @@
                 margin-left: auto;
                 opacity: .8;
             }
+            .pause-icon {
+                display: inline-block;
+                background-image: url('/imgs/play-icon.png');
+                width: 45px;
+                height: 45px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 16px -181px;
+                border: 1px solid white;
+                border-radius: 50%;
+                margin-left: auto;
+                opacity: .8;
+            }
           
         }
         .lyric-wrap {
             width: 100%;
-            max-height: 300px;
-            padding: 14px;
+            max-height:50vh;
+            padding: 12px;
             color: rgba(255, 255, 255, 0.6);
             font-weight: normal;
             text-align: center;
-            overflow: hidden;
-            p {
+            overflow: scroll;
+            .lyric-content{
+                transition: all linear .3s;
+                transform: translateY(-0px);
+                p {
                 margin: 0;
                 line-height: 42px;
-                font-size: 18px;
+                font-size: 16px;
+                }
             }
         }
         .player-control {
@@ -127,12 +149,12 @@
                         background-color: $header-background;
                         width: 202px;
                         height: 2px;
-                        transform: translateX(-50px);
+                        transform: translateX(-100%);
                     }
                     .progress_bg {
                         width: 202px;
                         height: 2px;
-                        background-color: rgba(255, 255, 255, 0.6);
+                        background-color: rgba(255, 255, 255, 0.3);
                     }
                 }
                 .play-time {
