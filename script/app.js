@@ -12,6 +12,21 @@
     
     let musicPlayer= new MusicPLayer(document.querySelector('.music-player'))
 
+
+    function onHashChange() {
+        let hash = location.hash;
+        if (/^#player\?.+/.test(hash)){
+            let matches = hash.slice(hash.indexOf('?')+1).match(/(\w+)=([^&]+)/g)
+            let options = matches.reduce((res,cur) => {
+                let arr = cur.split('=');
+                res[arr[0]] = arr[1];
+                return res
+            },{})
+            musicPlayer.startplay(options)
+        }
+    }
+    window.addEventListener('hashchange',onHashChange);
+
     function render(json){
         renderSliders(json.data.slider)
         renderRadios(json.data.radioList)

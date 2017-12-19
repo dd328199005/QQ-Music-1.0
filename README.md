@@ -58,3 +58,7 @@ undefined。
  20.  new Image();
 
  21. pointer-events:none;点击不触发时间【穿透】
+
+ 22. &::-webkit-scrollbar {
+      display: none
+    }

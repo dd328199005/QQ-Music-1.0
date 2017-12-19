@@ -70,11 +70,20 @@ class Search{
     append(songs){
         let html = songs.map(song => `
             <li class="resuilt-item">
-                <span class="music-icon"></span>
-                <h6>${song.songname}</h6>
-                <p>${song.singer.map(er => er.name).join(' ')}</p>
+                <a href="#player?artist=${song.singer.map(er => er.name).join(' ')}&songid=${song.songid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}">
+                    <span class="music-icon"></span>
+                    <h6>${song.songname}</h6>
+                    <p>${song.singer.map(er => er.name).join(' ')}</p>
+                </a>
             </li>
         `).join('')
         this.$el.querySelector('.search-result-list').insertAdjacentHTML('beforeend',html)//新认识接口
     }
 }
+
+
+// https://y.gtimg.cn/music/photo_new/T002R150x150M000003GOiTz14NR7b.jpg?max_age=2592000
+
+//                                                    003GOiTz14NR7b
+
+// https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg?nobase64=1&musicid=792575&songtype=0

@@ -83,38 +83,47 @@
                 position: relative;
                 height: 55px;
                 display: flow-root;
-                span{
-                    background-image: url('/imgs/search_sprite.png');
-                    width: 22px;
-                    height: 20px;
-                    display: inline-block;
-                    background-size: cover;
-                    position: absolute;
-                    left: 18px;
-                    top: 50%;
-                    transform: translateY(-50%);
+                a {
+                    text-decoration: none;
+                    span {
+                      background-image: url('/imgs/search_sprite.png');
+                      width: 22px;
+                      height: 20px;
+                      display: inline-block;
+                      background-size: cover;
+                      position: absolute;
+                      left: 18px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                    }
+
+                    h6 {
+                      @include h6-style;
+                      @include no-wrap;
+                    }
+
+                    p {
+                      padding: 0;
+                      margin: 0;
+                      line-height: 18px;
+                      color: #808080;
+                      font-size: 12px;
+                      @include no-wrap;
+                    }
+
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      height: 1px;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      background: #e5e5e5;
+                    }
+
+
                 }
-                h6 {
-                   @include h6-style;
-                   @include no-wrap;
-                }
-                p {
-                    padding: 0;
-                    margin: 0;
-                    line-height: 18px;
-                    color: #808080;
-                    font-size: 12px;
-                    @include no-wrap;
-                }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    height: 1px;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    background: #e5e5e5;
-                }
+                
 
             }
         }

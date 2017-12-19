@@ -8,8 +8,10 @@
 @import "_rank";
 @import "_search";
 @import "_music-player";
+
 body {
     background-color: $body-background;
     font-family: $font-style;
     position: relative;
+    text-decoration: none;
 }

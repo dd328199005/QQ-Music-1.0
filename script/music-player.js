@@ -3,11 +3,12 @@ class MusicPLayer {
         this.$el = el;
         this.$el.addEventListener('click',this)
         this.creatAudio();
-        this.progress = new progressBar(document.querySelector('.progress'), 5, true);
+        this.progress = new progressBar(document.querySelector('.progress'));
         this.lyrice = new lyricsPLayer(document.querySelector('.lyric-wrap'));
         document.querySelector('.down-qq').addEventListener('click',()=>this.show())
     }
 
+ 
     creatAudio(){
         this.$audio = document.createElement('audio');
         this.$audio.loop = true;
@@ -27,17 +28,46 @@ class MusicPLayer {
                 this.hide()
                 break;
         }
-
     }
+
+    startplay(options){
+       if(!options) return;
+        this.$el.querySelector('.song-info h1').innerText = decodeURIComponent(options.songname);
+        this.$el.querySelector('.song-info p').innerText = decodeURIComponent(options.artist);
+        this.progress.reset(options.duration);
+
+        let url = `https://y.gtimg.cn/music/photo_new/T002R150x150M000${options.albummid}.jpg`
+        this.$el.querySelector('.song-img img').src = url;
+        this.$el.querySelector('.bg-image').style.backgroundImage = `url(${url})`
+        
+        if(options.songid){
+            this.songid = options.songid;
+            this.$audio.src = `http://ws.stream.qqmusic.qq.com/${this.songid}.m4a?fromtag=46`;
+            fetch(`https://qq-music-api.now.sh/lyrics?id=${this.songid}`)
+                .then(res => res.json())
+                .then(json => json.lyric)
+                .then(text => this.lyrice.reset(text))
+                
+        }
+        this.show()
+        if (this.$el.querySelector('.pause-icon')) this.$el.querySelector('.pause-icon').className = 'play-icon';
+    }
+
 
     onPlay(event){
         event.target.classList.remove('play-icon')
         event.target.classList.add('pause-icon')
+        this.$audio.play()
+        this.progress.start()
+        this.lyrice.start()
     }
     
     onPause(event){
         event.target.classList.remove('pause-icon')
         event.target.classList.add('play-icon')
+        this.$audio.pause()
+        this.progress.pause()
+        this.lyrice.pause()
     }
 
     show(){

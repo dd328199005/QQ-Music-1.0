@@ -1,17 +1,15 @@
 
 class progressBar {
-    constructor(el,totalTime,start){
+    constructor(el){
         this.$el = el;
         this.initTime = 0;
-        this.totalTime = totalTime || 0;
-        this.allTime = totalTime;
+        this.totalTime = 0;
         this.progress = 0;
         this.render()
         this.startTime = this.$el.querySelector('.start-time');
         this.endTime = this.$el.querySelector('.end-time');
         this.startTime.innerText = this.handleTime(this.initTime);
         this.endTime.innerText = this.handleTime(this.totalTime);
-        if (start) this.start()
     }
     start(){
         this.intervalid = setInterval(this.updata.bind(this),1000)
@@ -23,18 +21,22 @@ class progressBar {
         this.pause();
         this.initTime = 0;
         this.progress = 0;
+        this.startTime.innerText = this.handleTime(this.initTime);
+        this.endTime.innerText = this.handleTime(this.totalTime);
+        this.progress = this.initTime / this.totalTime * 100;
+        this.$el.querySelector('.progress_load').style.transform = `translateX(${this.progress - 100}%)`;
         if(newTime){
             this.totalTime = newTime
             this.endTime.innerText = this.handleTime(this.totalTime);
         }
     }
-    updata(totalTime){
+    updata(){
         if(this.totalTime === 0 ) return this.reset();
         this.initTime += 1;
-        this.totalTime -= 1;
+        if (this.initTime === this.totalTime) return this.reset();
         this.startTime.innerText = this.handleTime(this.initTime);
         this.endTime.innerText = this.handleTime(this.totalTime);
-        this.progress = this.initTime/this.allTime * 100;
+        this.progress = this.initTime/this.totalTime * 100;
         this.$el.querySelector('.progress_load').style.transform = `translateX(${this.progress - 100}%)`;
     }
     render() {
