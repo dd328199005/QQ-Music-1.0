@@ -1,4 +1,4 @@
-class Slider {
+export class Slider {
     constructor(options = {}){
         this.$option = options;
         this.$el = options.el;

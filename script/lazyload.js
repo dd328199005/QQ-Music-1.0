@@ -1,4 +1,4 @@
-function lazyLoad(imgNodes) {
+export function lazyLoad(imgNodes) {
     let imgs = Array.from(imgNodes)
 
     if (!IntersectionObserver){

@@ -1,5 +1,5 @@
 
-class progressBar {
+export class progressBar {
     constructor(el){
         this.$el = el;
         this.initTime = 0;

@@ -80,7 +80,7 @@
             }
           
         }
-        .lyric-wrap {
+        .lyricwrap {
             width: 100%;
             max-height:50vh;
             padding: 12px;
@@ -88,6 +88,10 @@
             font-weight: normal;
             text-align: center;
             overflow: scroll;
+            border: 0;
+            &::-webkit-scrollbar {
+              display: none
+            }
             .lyric-content{
                 transition: all linear .3s;
                 transform: translateY(-0px);

@@ -1,10 +1,14 @@
-class MusicPLayer {
+
+import { progressBar } from "./progress_bar.js";
+import { lyricsPLayer } from "./lyrics_player.js";
+
+export class MusicPLayer {
     constructor(el){
         this.$el = el;
         this.$el.addEventListener('click',this)
         this.creatAudio();
         this.progress = new progressBar(document.querySelector('.progress'));
-        this.lyrice = new lyricsPLayer(document.querySelector('.lyric-wrap'));
+        this.lyrice = new lyricsPLayer(document.querySelector('.lyricwrap'));
         document.querySelector('.down-qq').addEventListener('click',()=>this.show())
     }
 

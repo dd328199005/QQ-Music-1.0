@@ -1,4 +1,4 @@
-class Tabs {
+export class Tabs {
     constructor(e){
         this.target = e.el
         this.init()

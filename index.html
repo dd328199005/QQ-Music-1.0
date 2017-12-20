@@ -3,7 +3,7 @@
     <head>
         <title>qq.muscic</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" href="./dist/style.css">
         <meta name="viewport" content="initial-scale=1.0">
     </head>
     <body>
@@ -14,12 +14,12 @@
         </header>
         <nav class="navbar">
             <ul class="nav-list">
-                <li class="nav-itme " data-view=".rec-view" data-roll="tab">推荐</li>
+                <li class="nav-itme active " data-view=".rec-view" data-roll="tab">推荐</li>
                 <li class="nav-itme" data-view=".rank-view" data-roll="tab">排行榜</li>
-                <li class="nav-itme active" data-view=".search-view" data-roll="tab">搜索</li>
+                <li class="nav-itme " data-view=".search-view" data-roll="tab">搜索</li>
             </ul>
         </nav>
-        <div class="rec-view  hide tab-content">
+        <div class="rec-view tab-content">
             <div class="qq-slider" id="slider">
                 <div class="qq-slider-wrap">
                 </div>
@@ -71,7 +71,7 @@
                 </div> -->
             </div>
         </div>
-        <div class="search-view  tab-content">
+        <div class="search-view  hide  tab-content">
             <div class="search-input">
                 <input type="text" name="search" placeholder="搜索歌曲,歌单,专辑" autocomplete="off">
                 <span class="search-icon"></span>
@@ -122,12 +122,8 @@
                     </div>
                     <div class="play-icon"></div>
                 </div>
-                <div class="lyric-wrap">
-                    <!-- <div class="lyric-content">
-                        <p>hahahahahah</p>
-                        <p>hahahahahah</p>
-                        <p>hahahahahah</p>
-                    </div> -->
+                <div class="lyricwrap">
+                    
                 </div>
                 <div class="player-control">
                     <div class="control-icon">
@@ -162,14 +158,15 @@
         </div>
         
       
-        <script src="script/slider.js"></script>
-        <script src="script/search.js"></script>
-        <script src="script/lazyload.js"></script>
-        <script src="script/tab.js"></script>
+        <!-- <script src="script/slider.js"></script> -->
+        <!-- <script src="script/search.js"></script>
+        <!-- <script src="script/lazyload.js"></script> -->
+        <!-- <script src="script/tab.js"></script>
         <script src="script/progress_bar.js"></script>
         <script src="script/music-player.js"></script>
-        <script src="script/lyrics_player.js"></script>
-        <script src="script/app.js"></script>
+        <script src="script/lyrics_player.js"></script> --> 
+        <script src="./dist/bundle.js"></script>
+        <!-- <script type="module" src="script/app.js"></script> -->
 
     </body>
 </html>
