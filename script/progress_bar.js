@@ -32,7 +32,7 @@ export class progressBar {
     }
     updata(){
         if(this.totalTime === 0 ) return this.reset();
-        this.initTime += 1;
+        this.initTime = Math.floor(document.querySelector('audio').currentTime);
         if (this.initTime === this.totalTime) return this.reset();
         this.startTime.innerText = this.handleTime(this.initTime);
         this.endTime.innerText = this.handleTime(this.totalTime);

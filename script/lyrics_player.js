@@ -11,6 +11,7 @@ export class lyricsPLayer {
         this.initTime = 0;
         this.reset();
         // this.start();
+        
         this.line_height = 42;
 
     }
@@ -21,8 +22,8 @@ export class lyricsPLayer {
         clearInterval(this.interval);
     }
     update() {
-        this.initTime += 1;
-        if(this.index === this.lyrics.length -1 ) return this.reset();
+        this.initTime = Math.floor(document.querySelector('audio').currentTime);
+        if(this.index === this.lyrics.length -1 ) return this.restart();
         for(let i = this.index + 1; i < this.lyrics.length ;i++ ){
             let seconds = this.getSenconds(this.lyrics[i]);
             if(
