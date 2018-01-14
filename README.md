@@ -7,7 +7,7 @@
 
 3. window.removeEventListener
 
-4. let { left, top, bottom, right } = img.getBoundingClientRect()
+4. let { left, top, bottom, right } = img.getBoundingClientRect()[相对浏览器的位置]
 
 5. fetch('/json/_rec.json').then(res =>res.json())
         .then(render)
@@ -43,6 +43,9 @@ undefined。
 
 16. pageYOffset[滚动高度] 和document.documentElement.scrollTop   以及scrollY【是其别名】 类似
  + document.documentElement.clientHeight【高度】 > document.body.scrollHeight【元素内容文档高度】
+
+17. offsetTop  此属性可以获取元素的上外缘距离最近采用定位父元素内壁的距离，如果父元素中没有采用定位的，则是获取上外边缘距离文档内壁的距离。所谓的定位就是position属性值为relative、absolute或者fixed。
+
 
 
  var c = 'dakjdakldachendakjdalkjalyang'
