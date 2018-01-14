@@ -45,8 +45,9 @@ export class MusicPLayer {
         this.$el.querySelector('.bg-image').style.backgroundImage = `url(${url})`
         
         if(options.songid){
+            this.songmid = options.songmid;
             this.songid = options.songid;
-            this.$audio.src = `http://ws.stream.qqmusic.qq.com/${this.songid}.m4a?fromtag=46`;
+            this.$audio.src = `http://isure.stream.qqmusic.qq.com/C100${this.songmid}.m4a?fromtag=32`;
             fetch(`https://qq-music-api.now.sh/lyrics?id=${this.songid}`)
                 .then(res => res.json())
                 .then(json => json.lyric)

@@ -68,9 +68,10 @@ export class Search{
         })
     }
     append(songs){
+        console.log(songs)
         let html = songs.map(song => `
             <li class="resuilt-item">
-                <a href="#player?artist=${song.singer.map(er => er.name).join(' ')}&songid=${song.songid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}">
+                <a href="#player?artist=${song.singer.map(er => er.name).join(' ')}&songid=${song.songid}&songmid=${song.songmid}&songname=${song.songname}&albummid=${song.albummid}&duration=${song.interval}">
                     <span class="music-icon"></span>
                     <h6>${song.songname}</h6>
                     <p>${song.singer.map(er => er.name).join(' ')}</p>
