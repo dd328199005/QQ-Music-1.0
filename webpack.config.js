@@ -39,11 +39,28 @@ module.exports = {
                     ]
                   }),
                   exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: [
+                        {
+                            loader: "css-loader",
+                            options: {
+                                minimize: true
+                            }
+                        },
+                        "postcss-loader",
+                    ]
+                }),
+                exclude: /node_modules/
             }
+           
         ]
     },
     plugins:[
-        new webpack.BannerPlugin('版权所有，盗版必究'),
+        new webpack.BannerPlugin('QQ音乐demo form陈康'),
         new HtmlWebpackPlugin({
             template: __dirname + "/index.html"
         }),

@@ -65,6 +65,7 @@ export function lazyLoad(imgNodes) {
         images.src = img.dataset.src
         images.onload = function(){
             img.src = images.src
+            img.style = 'visibility: visible'
             img.classList.remove('lazyLoad')
         } 
         if(typeof callBack === "function")callBack()

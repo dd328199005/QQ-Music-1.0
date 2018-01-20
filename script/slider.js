@@ -1,44 +1,36 @@
+import Swiper from 'swiper'
+import '../scss/swiper.css'
 export class Slider {
     constructor(options = {}){
         this.$option = options;
         this.$el = options.el;
         this.render()
-        this.interval = options.interval || 4000
-        this.start()
         this.index = 0
     }
     render(){
-        this.$wrap = this.$el.firstElementChild;
-        this.length = this.$option.sliders.length;
-        this.$wrap.style.width = `${this.length * 100 + 100}%`;
-        this.$wrap.innerHTML = this.$option.sliders.map(slider => `
-            <div class="qq-slider-item">
-                    <a href="${slider.link}">
-                    <img src="${slider.img}" alt="slider">
+        this.$wrap = this.$el
+        let shtml = this.$option.sliders.map(slider => `
+                <div class="swiper-slide">
+                    <a class="js-no-follow" href="${slider.link}">
+                    <img class="goods-main-photo fadeIn" src="${slider.img}" alt="slider">
                     </a>
-            </div>
-        `).join('')//注意掌握map和foreach的区别
-        let clone_start = this.$wrap.firstElementChild.cloneNode(true);
-        // let clone_end = this.$wrap.lastElementChild.cloneNode(true);
-        this.$wrap.appendChild(clone_start)
-        // this.$wrap.insertBefore(clone_start,this.$wrap.firstChild)
+                </div>
+        `).join('') 
+        let html = ` <div class="swiper-wrapper">
+                        ${shtml} 
+                     </div>
+                     <div class="swiper-pagination"></div>
+                   `
+        this.$wrap.innerHTML = html
+        this.start()
     }
-
     start(){
-        setInterval(this.next.bind(this),this.interval)
+        new Swiper(this.$el, {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination'
+            },
+            // autoplay: true
+        })
     }
-
-    next(){
-        this.index++
-        if(this.index === this.length + 1){
-            this.$wrap.style.transition = 'none'
-            this.$wrap.style.transform = `translate(0)`
-            this.index = 0;
-            return
-        }
-        let left = `-${this.index * 100 / (this.length + 1)}%`
-        this.$wrap.style.transform =`translate(${left})`
-        if (this.index === 1) this.$wrap.style.transition = 'all .6s'
-    }
-
 }

@@ -14,7 +14,7 @@ export class Rank {
                 <div class="top-item">
                     <a href="#">
                         <div class="item-img">
-                            <img class="lazyLoad" data-src="${item.picUrl}" alt="pic">
+                            <img class="lazyLoad" data-src="${item.picUrl}" style="visibility:hidden" alt="pic">
                         </div>
                         <div class="top-info">
                             <h2>${item.topTitle}</h2>

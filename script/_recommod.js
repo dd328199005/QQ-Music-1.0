@@ -32,7 +32,7 @@ export class Recommond {
         this.$el.querySelector('.radios .list').innerHTML = radioLists.map(radio => `
             <div class="item">
                 <div class="item_media">
-                    <img class='lazyLoad' data-src=${radio.picUrl} alt="pic">
+                    <img class='lazyLoad' data-src=${radio.picUrl} style="visibility:hidden" alt="pic">
                     <span class="icon"></span>
                 </div>
                 <div class="item_info">
@@ -45,7 +45,7 @@ export class Recommond {
         this.$el.querySelector('.song .list').innerHTML = songLists.map(radio => `
             <div class="item">
                 <div class="item_media">
-                    <img class='lazyLoad' data-src=${radio.picUrl} alt="pic">
+                    <img class='lazyLoad' data-src=${radio.picUrl} style="visibility:hidden" alt="pic">
                     <span class="icon"></span>
                 </div>
                 <div class="item_info">

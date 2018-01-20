@@ -27,7 +27,8 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "swiper": "^4.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.3",
